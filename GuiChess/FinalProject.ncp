@@ -1,0 +1,186 @@
+<Project>
+  <Name>FinalProject</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Chess</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>ChessGame</Name>
+        <Access>Public</Access>
+        <Location left="269" top="71" />
+        <Size width="162" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Button[,] guiGrid = new Button[ChessBoard.BoardSize, ChessBoard.BoardSize]</Member>
+        <Member type="Field">public Player1 player = new Player1()</Member>
+        <Member type="Field">public Bobby cpu = new Bobby()</Member>
+        <Member type="Field">public ChessPiece piece</Member>
+        <Member type="Method">public void PlayGame()</Member>
+        <Member type="Method">public void QuitGame()</Member>
+        <Member type="Constructor">public ChessGame()</Member>
+        <Member type="Event">public event StartButton Click</Member>
+        <Member type="Event">public event GridBtn MouseMove</Member>
+        <Member type="Event">public event GridBtn MouseLeave</Member>
+        <Member type="Method">private void renderBoard()</Member>
+        <Member type="Method">private void fillBoard(ChessPiece pieces)</Member>
+        <Member type="Method">private void runCpuTurn()</Member>
+        <Member type="Method">private void playerMovePiece(ChessPiece piece, int x, int y, Player player)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ChessBoard</Name>
+        <Access>Public</Access>
+        <Location left="556" top="71" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public const int BoardSize = 8</Member>
+        <Member type="Property">public BoardCell[,] board { get; private set; }</Member>
+        <Member type="Constructor">public ChessBoard()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ChessPiece</Name>
+        <Access>Public</Access>
+        <Location left="891" top="476" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public Image display</Member>
+        <Member type="Property">public int score { get; set; }</Member>
+        <Member type="Property">public int xPos { get; set; }</Member>
+        <Member type="Property">public int yPos { get; set; }</Member>
+        <Member type="Property">public String team { get; private set; }</Member>
+        <Member type="Property">public String type { get; set; }</Member>
+        <Member type="Constructor">ChessPiece()</Member>
+        <Member type="Constructor">public ChessPiece(int x, int y, String side, String type)</Member>
+        <Member type="Constructor">ChessPiece(ChessPiece thePiece)</Member>
+        <Modifier>Static</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BoardCell</Name>
+        <Access>Public</Access>
+        <Location left="869" top="71" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public bool isOccupied</Member>
+        <Member type="Field">public int xAxis</Member>
+        <Member type="Field">public int yAxis</Member>
+        <Member type="Constructor">public BoardCell(int x, int y)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>StateOfPlay</Name>
+        <Access>Public</Access>
+        <Location left="526" top="476" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public static List&lt;ChessPiece&gt; activePieces</Member>
+        <Member type="Field">public static ChessBoard gameBoard</Member>
+        <Member type="Property">public static int gameScore { get; set; }</Member>
+        <Member type="Method">public static void takePiece(ChessPiece takenPiece)</Member>
+        <Member type="Method">public static bool checkLane(ChessPiece piece, BoardCell boardcell)</Member>
+        <Member type="Method">public static void setGameScore()</Member>
+        <Member type="Method">public static bool isValidMove(ChessPiece piece, BoardCell boardcell)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="269" top="548" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public bool isPlayerTurn { get; set; }</Member>
+        <Member type="Property">public int score { get; set; }</Member>
+        <Member type="Method">public static void movePiece(ChessPiece piece, BoardCell cell)</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player1</Name>
+        <Access>Public</Access>
+        <Location left="458" top="938" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Player1()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Bobby</Name>
+        <Access>Public</Access>
+        <Location left="269" top="938" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Bobby()</Member>
+        <Member type="Method">public ChessPiece makeMove()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="6">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>602</X>
+          <Y>804</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="5">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

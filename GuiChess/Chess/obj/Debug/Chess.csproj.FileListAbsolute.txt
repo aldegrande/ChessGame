@@ -1,0 +1,8 @@
+C:\Users\Alex\source\repos\GuiChess\Chess\bin\Debug\Chess.dll
+C:\Users\Alex\source\repos\GuiChess\Chess\bin\Debug\Chess.pdb
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\Chess.csprojAssemblyReference.cache
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\Chess.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\Chess.dll
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\Chess.pdb
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\FinalProject.Chess.Properties.Resources.resources
+C:\Users\Alex\source\repos\GuiChess\Chess\obj\Debug\Chess.csproj.GenerateResource.cache
