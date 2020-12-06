@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace>FinalProject.Chess</RootNamespace>
+    <AssemblyName>Chess</AssemblyName>
+    <ProjectGuid>{C1638EAA-FBE3-4942-A6BE-0B1FB2D5FE6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChessBoard.cs" />
+    <Compile Include="ChessPiece.cs" />
+    <Compile Include="BoardCell.cs" />
+    <Compile Include="King.cs" />
+    <Compile Include="Queen.cs" />
+    <Compile Include="Bishop.cs" />
+    <Compile Include="Knight.cs" />
+    <Compile Include="Rook.cs" />
+    <Compile Include="Pawn.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StateOfPlay.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Player1.cs" />
+    <Compile Include="Bobby.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black-rook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-bishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-king.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-pawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-rook.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
